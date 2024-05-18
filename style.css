@@ -61,6 +61,12 @@ body * {
   margin-top: 8px;
 }
 
+#switch{
+  position: relative; /* elementos filhos posicionados relativos ao switch */
+  width: 64px;
+  margin: 4px auto;
+}
+
 /* switch */
 #switch button {
   width: 32px;
@@ -68,6 +74,18 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
+    
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+
 }
 
 #switch span {
@@ -80,6 +98,7 @@ body * {
   backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
+
 
 /* links */
 ul {
